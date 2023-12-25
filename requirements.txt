@@ -1,0 +1,3 @@
+paho-mqtt==1.6.1
+sd-notify==0.1.0
+pyalsaaudio==0.10.0
