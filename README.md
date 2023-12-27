@@ -44,6 +44,29 @@ Run `app.py` via the command line or set it as a service with the following mand
 
 `PROBE_CAPABILITIES` are reported to the manager and define which methods can be run on this instance of the probe.
 
+### Available `PROBE_METHODS`
+
+| Method name      | Description                                  | Linux | Windows |
+| ---------------- | -------------------------------------------- | ----- | ------- |
+| ping             | Signal that the device is alive              | ✅    | ✅      |
+| uptime           | Time since boot                              | ✅    | ❌      |
+| fans             | Fan speeds (lm_sensors)                      | ✅    | ❌      |
+| temperatures     | CPU temps (lm_sensors)                       | ✅    | ❌      |
+| display          | Display resolution and refresh rate (xrandr) | ✅    | ❌      |
+| is_muted         | Audio mute                                   | ✅    | ✅      |
+| easire           | Health state of the easire client            | ✅    | ❌      |
+| mpv_file_pos_sec | Playback position of the mpv player          | ✅    | ❌      |
+
+### Available `PROBE_CAPABILITIES`
+
+| Method name | Description          | Linux | Windows |
+| ----------- | -------------------- | ----- | ------- |
+| wake        | Wake the device      | ✅    | ✅      |
+| shutdown    | Shut down the device | ✅    | ✅      |
+| reboot      | Reboot the device    | ✅    | ✅      |
+| mute        | Mute the audio       | ✅    | ✅      |
+| unumute     | Unmute the audio     | ✅    | ✅      |
+
 Example userconfig.txt:
 
 ```bash
